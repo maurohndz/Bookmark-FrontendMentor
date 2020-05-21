@@ -1,0 +1,55 @@
+.hero {
+  border: 1px solid #457;
+}
+.menu {
+  border: 1px solid #457;
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: rgba(47,53,79,0.9);
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-checkbox:checked ~ .menu-open {
+  border: 1px solid #fff;
+}
+.menu-checkbox:checked ~ .menu {
+  display: block;
+}
+.menu-open {
+  border: 1px solid #fa5757;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  cursor: pointer;
+  background: url("../images/icon-hamburger.svg") no-repeat center;
+}
+.header {
+  border: 1px solid #457;
+  background-color: #fff;
+  position: relative;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+:root {
+  --softBlue: #5368df;
+  --softRed: #fa5757;
+  --grayishBlue: #9194a1;
+  --veryDarkBlue: #252b46;
+}
+body {
+  background-color: #fff85f;
+  font-family: 'Rubik', sans-serif;
+  color: var(--veryDarkBlue);
+  margin: 0;
+}
+.u-wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 1em;
+}
