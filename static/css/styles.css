@@ -143,8 +143,11 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   padding: 3em 0;
 }
 .download {
-  border: 1px solid #414141;
   text-align: center;
+  padding: 3em 0;
+}
+.download .u-wrapper > .u-p {
+  margin-bottom: 3em;
 }
 .download-grid {
   margin-top: 3em;
@@ -154,7 +157,9 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
 .download-item {
   border-radius: 1em;
   padding: 1.5em;
+  padding-top: 2.5em;
   background: url("../images/bg-dots.svg") repeat-x center bottom 95px;
+  box-shadow: 0 10px 11px -5px rgba(83,104,223,0.4);
 }
 .download-item .u-p {
   margin-top: 0.5em;
