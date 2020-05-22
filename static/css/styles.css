@@ -1,5 +1,12 @@
 .hero {
-  border: 1px solid #457;
+  text-align: center;
+  padding: 4em 0;
+}
+.hero-image {
+  max-width: 100%;
+}
+.hero-buttons {
+  padding-top: 1.1em;
 }
 .menu {
   display: none;
@@ -62,7 +69,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 1.2em 0;
+  padding: 1em 0;
 }
 .header-logo {
   display: inline-flex;
@@ -76,6 +83,63 @@
   justify-content: space-between;
   align-items: center;
 }
+.tabs {
+  margin-top: 2em;
+  border-top: 1px solid var(--grayishBlue);
+}
+.tabs-link {
+  border-bottom: 1px solid var(--grayishBlue);
+}
+.tabs-content {
+  display: none;
+}
+.tabs-content img {
+  max-width: 100%;
+}
+.tabs-grid {
+  margin-top: 4em;
+}
+.tabs label {
+  padding: 1em 0;
+  display: block;
+  position: relative;
+}
+.tabs label:after {
+  display: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 0;
+  transform: translateX(50%);
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #fa5858;
+}
+.tabs input[type='radio'] {
+  display: none;
+}
+input[id="bookmarking"]:checked ~ ul [for='bookmarking']:after {
+  display: block;
+}
+input[id="bookmarking"]:checked ~ .tabs-grid #tab-bookmarking {
+  display: block;
+}
+input[id="searching"]:checked ~ ul [for='searching']:after {
+  display: block;
+}
+input[id="searching"]:checked ~ .tabs-grid #tab-searching {
+  display: block;
+}
+input[id="sharing"]:checked ~ ul [for='sharing']:after {
+  display: block;
+}
+input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
+  display: block;
+}
+.features {
+  text-align: center;
+}
 :root {
   --softBlue: #5368df;
   --softRed: #fa5757;
@@ -83,13 +147,48 @@
   --veryDarkBlue: #252b46;
 }
 body {
-  background-color: #fff85f;
   font-family: 'Rubik', sans-serif;
   color: var(--veryDarkBlue);
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
   margin: 0;
 }
 .u-wrapper {
   max-width: 1280px;
   margin: auto;
   padding: 0 1em;
+}
+.u-h1,
+.u-h2 {
+  font-size: 2em;
+}
+.u-p {
+  color: var(--grayishBlue);
+  line-height: 1.8;
+  font-size: 0.9em;
+}
+.u-button {
+  background-color: var(--softBlue);
+  color: #fff;
+  border: none;
+  padding: 1em 1em;
+  font-size: 0.9em;
+  border-radius: 0.5em;
+  font-weight: 500;
+  margin-left: 1.5em;
+  box-shadow: 0 5px 10px -5px var(--softBlue);
+  cursor: pointer;
+}
+.u-button:first-of-type {
+  margin: 0;
+}
+.u-button.is-gray {
+  background-color: #f7f7f7;
+  color: var(--veryDarkBlue);
+}
+.is-hidden {
+  display: none;
 }
