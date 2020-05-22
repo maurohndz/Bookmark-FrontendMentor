@@ -95,6 +95,7 @@
 }
 .tabs-content img {
   max-width: 100%;
+  margin-bottom: 1.5em;
 }
 .tabs-grid {
   margin-top: 4em;
@@ -139,6 +140,25 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
 }
 .features {
   text-align: center;
+  padding: 3em 0;
+}
+.download {
+  border: 1px solid #414141;
+  text-align: center;
+}
+.download-grid {
+  margin-top: 3em;
+  display: grid;
+  grid-row-gap: 2em;
+}
+.download-item {
+  border-radius: 1em;
+  padding: 1.5em;
+  background: url("../images/bg-dots.svg") repeat-x center bottom 95px;
+}
+.download-item .u-p {
+  margin-top: 0.5em;
+  margin-bottom: 4em;
 }
 :root {
   --softBlue: #5368df;
@@ -162,8 +182,17 @@ ul {
   padding: 0 1em;
 }
 .u-h1,
-.u-h2 {
+.u-h2,
+.u-h3 {
   font-size: 2em;
+  font-weight: 500;
+}
+.u-h2,
+.u-h3 {
+  font-size: 1.5em;
+}
+.u-h3 {
+  margin-button: 0.5rem;
 }
 .u-p {
   color: var(--grayishBlue);
@@ -188,6 +217,9 @@ ul {
 .u-button.is-gray {
   background-color: #f7f7f7;
   color: var(--veryDarkBlue);
+}
+.u-button.is-fullWidth {
+  width: 100%;
 }
 .is-hidden {
   display: none;
