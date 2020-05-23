@@ -8,6 +8,27 @@
 .hero-buttons {
   padding-top: 1.1em;
 }
+@media screen and (min-width: 1024px) {
+  .hero {
+    text-align: left;
+    padding: 1em 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    grid-template-areas: 'content  image';
+    align-items: center;
+  }
+  .hero-image-container {
+    grid-area: image;
+    position: relative;
+    top: 50px;
+    text-align: center;
+  }
+  .hero-content {
+    grid-area: content;
+  }
+}
 .menu {
   visibility: hidden;
   opacity: 0;
