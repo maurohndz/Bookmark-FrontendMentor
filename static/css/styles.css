@@ -165,6 +165,33 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   margin-top: 0.5em;
   margin-bottom: 4em;
 }
+.carousel {
+  text-align: left;
+  margin-bottom: 2.8em;
+}
+.carousel-content[open] .carousel-header {
+  border: none;
+}
+.carousel-content[open] .carousel-header::-webkit-details-marker {
+  color: var(--softRed);
+}
+.carousel-header {
+  padding: 1em 0;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.9em;
+}
+.carousel-header:focus {
+  outline: none;
+}
+.carousel-header::-webkit-details-marker {
+  float: right;
+  color: var(--softBlue);
+}
+.questions {
+  text-align: center;
+  padding: 3em 0;
+}
 :root {
   --softBlue: #5368df;
   --softRed: #fa5757;
