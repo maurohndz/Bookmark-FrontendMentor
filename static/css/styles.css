@@ -192,6 +192,65 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   text-align: center;
   padding: 3em 0;
 }
+.join {
+  background: var(--softBlue);
+  color: #fff;
+  padding: 3em 0;
+  text-align: center;
+}
+.join small {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.form .u-button {
+  margin: 0;
+}
+.form-input {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+}
+.form-input::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.3);
+}
+.footer {
+  background: var(--veryDarkBlue);
+  text-align: center;
+  padding: 3em 0;
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-menu {
+  margin-top: 2em;
+}
+.footer-menu a {
+  display: block;
+  text-transform: uppercase;
+  padding: 1em 0;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+}
+.footer-social {
+  margin-top: 2em;
+}
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.footer-social .twitter {
+  background: url("../images/icon-twitter.svg") center no-repeat;
+}
+.footer-social .facebook {
+  background: url("../images/icon-facebook.svg") center no-repeat;
+}
 :root {
   --softBlue: #5368df;
   --softRed: #fa5757;
@@ -215,7 +274,8 @@ ul {
 }
 .u-h1,
 .u-h2,
-.u-h3 {
+.u-h3,
+.u-h4 {
   font-size: 2em;
   font-weight: 500;
 }
@@ -225,6 +285,10 @@ ul {
 }
 .u-h3 {
   margin-button: 0.5rem;
+}
+.u-h4 {
+  font-size: 1.3em;
+  margin-top: 0.5em;
 }
 .u-p {
   color: var(--grayishBlue);
@@ -249,6 +313,9 @@ ul {
 .u-button.is-gray {
   background-color: #f7f7f7;
   color: var(--veryDarkBlue);
+}
+.u-button.is-red {
+  background-color: var(--softRed);
 }
 .u-button.is-fullWidth {
   width: 100%;
