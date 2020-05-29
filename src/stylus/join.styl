@@ -6,8 +6,11 @@
   small
     text-transform uppercase
     letter-spacing 4px
+
 .form
-  .u-button
+  max-width  450px
+  margin auto
+  & > .u-button
     margin 0
   &-input
     width 100%
@@ -20,3 +23,14 @@
     outline none
     &::-webkit-input-placeholder
       color rgba(0,0,0,.3)
+
+@media screen and (min-width 1024px)
+  .form
+    display flex
+    & > .u-button
+      width 30% !important
+      height 50px
+    &-input
+      width 70%
+      margin-right 15px
+      box-sizing border-box

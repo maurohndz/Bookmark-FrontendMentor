@@ -23,6 +23,7 @@
     grid-area: image;
     position: relative;
     top: 50px;
+    z-index: 2;
     text-align: center;
   }
   .hero-content {
@@ -128,6 +129,7 @@
   left: 0;
   right: 0;
   padding: 1em 0;
+  z-index: 1000;
 }
 .header-logo {
   display: inline-flex;
@@ -196,9 +198,53 @@ input[id="sharing"]:checked ~ ul [for='sharing']:after {
 input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   display: block;
 }
+@media screen and (min-width: 1024px) {
+  .tabs {
+    border: none;
+  }
+  .tabs ul {
+    display: flex;
+    justify-content: center;
+  }
+  .tabs label {
+    padding: 1.1em 2.9em 2em;
+  }
+  .tabs label:after {
+    width: 100%;
+    transform: translateX(0%);
+  }
+  .tabs-content {
+    grid-template-columns: 535px 1fr;
+    grid-gap: 5em;
+    align-items: center;
+    text-align: left;
+  }
+  input[id="bookmarking"]:checked ~ ul [for='bookmarking']:after {
+    display: flex;
+  }
+  input[id="bookmarking"]:checked ~ .tabs-grid #tab-bookmarking {
+    display: grid;
+  }
+  input[id="searching"]:checked ~ ul [for='searching']:after {
+    display: flex;
+  }
+  input[id="searching"]:checked ~ .tabs-grid #tab-searching {
+    display: grid;
+  }
+  input[id="sharing"]:checked ~ ul [for='sharing']:after {
+    display: flex;
+  }
+  input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
+    display: grid;
+  }
+}
 .features {
   text-align: center;
-  padding: 3em 0;
+  padding: 3em;
+}
+.features .u-wrapper > .u-p {
+  max-width: 580px;
+  margin: 0 auto;
 }
 .download {
   text-align: center;
@@ -223,6 +269,22 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   margin-top: 0.5em;
   margin-bottom: 4em;
 }
+@media screen and (min-width: 1024px) {
+  .download-grid {
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 0em;
+    grid-gap: 3em;
+  }
+  .download-grid #download-firefox {
+    position: relative;
+    top: 50px;
+  }
+  .download-grid #download-opera {
+    position: relative;
+    top: 100px;
+  }
+}
 .carousel {
   text-align: left;
   margin-bottom: 2.8em;
@@ -246,9 +308,27 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   float: right;
   color: var(--softBlue);
 }
+@media screen and (min-width: 1024px) {
+  .questions .u-wrapper .u-p {
+    margin-bottom: 1.9em;
+  }
+  .carousel {
+    margin-bottom: 3.5em;
+  }
+  .carousel-header {
+    padding: 1.8em 0;
+  }
+}
 .questions {
   text-align: center;
   padding: 3em 0;
+  max-width: 580px;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .questions {
+    padding: 7em 0 3em;
+  }
 }
 .join {
   background: var(--softBlue);
@@ -260,7 +340,11 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
   text-transform: uppercase;
   letter-spacing: 4px;
 }
-.form .u-button {
+.form {
+  max-width: 450px;
+  margin: auto;
+}
+.form > .u-button {
   margin: 0;
 }
 .form-input {
@@ -275,6 +359,20 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
 }
 .form-input::-webkit-input-placeholder {
   color: rgba(0,0,0,0.3);
+}
+@media screen and (min-width: 1024px) {
+  .form {
+    display: flex;
+  }
+  .form > .u-button {
+    width: 30% !important;
+    height: 50px;
+  }
+  .form-input {
+    width: 70%;
+    margin-right: 15px;
+    box-sizing: border-box;
+  }
 }
 .footer {
   background: var(--veryDarkBlue);
@@ -308,6 +406,36 @@ input[id="sharing"]:checked ~ .tabs-grid #tab-sharing {
 }
 .footer-social .facebook {
   background: url("../images/icon-facebook.svg") center no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .footer-content {
+    display: flex;
+    align-items: center;
+  }
+  .footer-primary {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .footer-primary > img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .footer-menu {
+    display: flex;
+    margin: 0;
+  }
+  .footer-menu a {
+    padding: 0 0.7em;
+  }
+  .footer-social {
+    margin: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 :root {
   --softBlue: #5368df;

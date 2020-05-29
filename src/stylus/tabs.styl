@@ -45,9 +45,39 @@
     ~ .tabs-grid #tab-sharing
       display block
 
+@media screen and (min-width 1024px)
+  .tabs
+    border none
+    ul
+      display flex
+      justify-content center
+    label
+      padding 1.1em 2.9em 2em
+      &:after
+        width 100%
+        transform translateX(0%)
+    &-content
+      grid-template-columns 535px 1fr
+      grid-gap: 5em
+      align-items center
+      text-align left
 
-
-
+    // controll tabs
+  input[id="bookmarking"]:checked
+    ~ ul [for='bookmarking']:after
+      display flex
+    ~ .tabs-grid #tab-bookmarking
+      display grid
+  input[id="searching"]:checked
+    ~ ul [for='searching']:after
+      display flex
+    ~  .tabs-grid #tab-searching
+      display grid
+  input[id="sharing"]:checked
+    ~ ul [for='sharing']:after
+      display flex
+    ~ .tabs-grid #tab-sharing
+      display grid
 
 
 
